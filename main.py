@@ -18,7 +18,7 @@ def send_telegram_msg(text):
     requests.post(url, json=payload)
 
 def check_vinted():
-    scraper = VintedScraper()
+    scraper = VintedScraper("https://www.vinted.es")
     
     # El bot revisará cada link de la lista uno por uno
     for i, url in enumerate(URLS_VINTED):
