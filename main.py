@@ -47,8 +47,7 @@ def check_vinted():
             
             with open(last_id_file, "w") as f:
                 f.write(str(latest_item.id))
-# Línea de prueba temporal
-send_telegram_msg("🚀 ¡Hola! Si lees esto, la conexión es CORRECTA.")
+
 if __name__ == "__main__":
     check_vinted()
 
