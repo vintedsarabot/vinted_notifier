@@ -1,0 +1,33 @@
+name: Vinted Monitor
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Se ejecuta automáticamente cada 10 minutos
+  workflow_dispatch:      # Permite que tú le des al botón de "Play" cuando quieras
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install vinted-scraper requests
+
+      - name: Run bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python main.py
+
+      - name: Save memory
+        run: |
+          git config --global user.name "VintedBot"
+          git config --global user.email "bot@vinted.com"
+          git add last_id_*.txt
+          git commit -m "Actualizar IDs" || echo "No changes"
+          git push
