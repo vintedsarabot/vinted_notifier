@@ -3,7 +3,8 @@ on:
   schedule:
     - cron: '*/6 * * * *' 
   workflow_dispatch:      # Permite que tú le des al botón de "Play" cuando quieras
-
+  repository_dispatch:
+    types: [trigger_bot]
 jobs:
   build:
     runs-on: ubuntu-latest
