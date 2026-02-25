@@ -1,7 +1,7 @@
 name: Vinted Monitor
 on:
   schedule:
-    - cron: '*/5 * * * *' 
+    - cron: '*/6 * * * *' 
   workflow_dispatch:      # Permite que tú le des al botón de "Play" cuando quieras
 
 jobs:
