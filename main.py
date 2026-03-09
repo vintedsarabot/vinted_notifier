@@ -7,7 +7,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 # 🛒 LISTA DE BÚSQUEDAS: Añade todas las que quieras separadas por comas
 URLS_VINTED =  [
-  "https://www.vinted.es/catalog?catalog[]=19&brand_ids[]=38777&page=1&time=1772096028&price_from=0&currency=EUR&price_to=80&order=newest_first",
+  "https://www.vinted.es/catalog?catalog[]=19&brand_ids[]=38777&page=1&time=1773060919&price_from=0&currency=EUR&price_to=80&order=newest_first",
   "https://www.vinted.es/catalog?catalog[]=19&page=1&time=1771691110&order=newest_first&currency=EUR&price_from=0&price_to=150.00&search_text=chloe%20paddington%20style%20bag&search_by_image_uuid=",
   "https://www.vinted.es/catalog?catalog[]=19&page=1&time=1771691176&order=newest_first&currency=EUR&price_from=0&search_text=chloe%20paddington&search_by_image_uuid=&brand_ids[]=2113&price_to=300"
 ]
